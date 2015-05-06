@@ -17,9 +17,8 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<?php get_template_part('photo-main-index'); ?>
-			<div class="row">
+		<h3 class="blog-info"><?php echo bloginfo('description'); ?></h3>
 				<?php get_template_part( 'post-limit' ); ?>
-			</div><!-- .row -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

@@ -15,6 +15,15 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+<?php 	
+	
+	if (function_exists('get_field')){
+		$logo_header = get_field('logo_header' , 'option');
+	 	$logo_url = get_field('url_header' ,  'option');
+		$banner = get_field('image_banner' ,  'option');
+		}
+
+?>
 </head>
 
 <body <?php body_class(); ?>>

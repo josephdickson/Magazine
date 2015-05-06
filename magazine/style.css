@@ -41,6 +41,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Foundation 5 Overrides
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -284,6 +285,10 @@ h5,
 h6 {
 	clear: both;
 }
+h1,
+h1.entry-title,
+h2,
+h3 {font-family: Raleway, Helvetica, sans-serif; font-weight: 400; }
 
 p {
 	margin-bottom: 1.5em;
@@ -893,3 +898,43 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/*--------------------------------------------------------------
+# Foundation 5 Overrides
+--------------------------------------------------------------*/
+/* Hyperlinks */
+a:link,
+a:visited,
+a:active {color:#f7941d;}
+a:hover {color:#003d71}
+
+/* Bock Grid */
+ul[class*="small-block-grid"] {
+	text-align: left;
+}
+ul[class*="small-block-grid"] li div.panel {
+	background-color:#f1f1f1;
+	border: none;
+	padding:0;
+	
+
+}
+
+ul[class*="small-block-grid"] li div.panel h1,
+ul[class*="small-block-grid"] li div.panel p {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+
+/*--------------------------------------------------------------
+# Design Modifications
+--------------------------------------------------------------*/
+.blog-info {
+	text-align:center;
+	background-color:#f7941d;
+	color: #fff;
+	padding:.5em 20%;
+	margin:0;
+	font-size:1.5em;
+}
+footer img {display:block;margin: 0 auto;}
