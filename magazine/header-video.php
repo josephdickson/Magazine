@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for our theme.
+ * The header for video tagged pages in the theme.
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
@@ -15,6 +15,15 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+<?php 	
+	
+	if (function_exists('get_field')){
+		$logo_header = get_field('logo_header' , 'option');
+	 	$logo_url = get_field('url_header' ,  'option');
+		$banner = get_field('image_banner' ,  'option');
+		}
+
+?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -41,14 +50,12 @@
 	</header>
       </section>
 
-      <section class="right-small">
-        <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
-      </section>
     </nav>
 
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
-	<?php get_sidebar( 2 ); ?>
+	<?php get_sidebar(); ?>
+      </ul>
     </aside>
 
     <aside class="right-off-canvas-menu">

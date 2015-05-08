@@ -1,40 +1,14 @@
-<?php
-/**
- * The template for displaying all single posts.
- *
- * @package magazine
- */
+<?php 
 
-get_header(); ?>
+$post = $wp_query->post;
+			if ( has_tag( 'video' )) {
+				get_header('video');
+				get_template_part('single-tag-video'); } 
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-			<div class="row">
 
-				<?php while ( have_posts() ) : the_post(); ?>
-					<?php 
-						if ( has_post_thumbnail() ) {
-						the_post_thumbnail(); 
-					} 
-					?>
+			else { 
+				get_header() .
+				get_template_part('single-default'); 
+			}
 
-					<?php get_template_part( 'template-parts/content', 'single' ); ?>
-
-					<?php the_post_navigation(); ?>
-
-					<?php
-						// If comments are open or we have at least one comment, load up the comment template
-						if ( comments_open() || get_comments_number() ) :
-							comments_template();
-						endif;
-					?>
-
-				<?php endwhile; // end of the loop. ?>
-			</div><!-- .row -->
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<div class="row">
-	<?php get_sidebar(); ?>
-</div>
-<?php get_footer(); ?>
+?>

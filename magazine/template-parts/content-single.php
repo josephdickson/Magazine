@@ -6,10 +6,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?><?php get_template_part('acf/acf', 'social-networks'); ?>
 
-		<div class="entry-meta">
-			<?php magazine_posted_on(); ?>
+		<div class="entry-meta row">
+			<div class="columns">
+				<?php // magazine_posted_on(); ?>
+			</div>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
