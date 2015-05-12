@@ -25,6 +25,6 @@ $image_attributes_medium_2 = wp_get_attachment_image_src( $attachment_id_2 , 'me
 $image_attributes_thumb_2 = wp_get_attachment_image_src( $attachment_id_2 , 'thumb' , 1 ); // returns an array
 if( $image_attributes_2 ) {
 ?>
-<div class="banner" data-interchange="[<?php echo $image_attributes_large_2[0]; ?>, (medium)], [<?php echo $image_attributes_2[0]; ?>, (large)]">
+<div class="banner" data-interchange="[<?php echo $image_attributes_large_2[0]; ?>, (default)], [<?php echo $image_attributes_large_2[0]; ?>, (medium)], [<?php echo $image_attributes_2[0]; ?>, (large)]">
 </div>
 <?php } ?>

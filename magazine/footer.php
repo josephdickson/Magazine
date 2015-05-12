@@ -15,6 +15,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+
 		<div class="site-info hide">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'magazine' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'magazine' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
@@ -24,9 +25,11 @@
 	<?php 
 		if (function_exists('get_field')){
 			$watermark = get_field('watermark' , 'option');
-			echo '<img src="' . $watermark['url'] . '" alt="' . $watermark['alt'] . '" />' ;
+			//echo '<img src="' . $watermark['url'] . '" alt="' . $watermark['alt'] . '" />' ;
 		}
 	?>
+
+	<?php get_template_part('acf/acf' , 'footer-link'); ?>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

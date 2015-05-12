@@ -5,11 +5,11 @@
  * @package magazine
  */
 
-get_header(); ?>
+get_header('single'); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<div class="row">
+			<div class="row article-begin">
 
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php 

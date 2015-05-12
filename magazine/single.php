@@ -7,7 +7,7 @@ $post = $wp_query->post;
 
 
 			else { 
-				get_header() .
+				get_header('single') .
 				get_template_part('single-default'); 
 			}
 
