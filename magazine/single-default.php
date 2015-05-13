@@ -21,7 +21,7 @@ get_header('single'); ?>
 					<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
 					<?php get_template_part('acf/acf', 'flexible-fields'); ?>
-					<h3 class="photo-gallery">Photo Gallery</h3>
+					
 					<?php get_template_part( 'acf/acf' , 'gallery' ); ?>
 
 					<?php // the_post_navigation(); ?>

@@ -30,10 +30,6 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'magazine' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<?php// get_template_part ('header', 'top-nav'); ?>
-	</header><!-- #masthead -->
-
 	<div id="content" class="site-content">
 
 <div class="off-canvas-wrap" data-offcanvas>
@@ -55,11 +51,5 @@
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
 	<?php get_sidebar(); ?>
-      </ul>
-    </aside>
-
-    <aside class="right-off-canvas-menu">
-      <ul class="off-canvas-list">
-        <?php get_sidebar(); ?>
       </ul>
     </aside>

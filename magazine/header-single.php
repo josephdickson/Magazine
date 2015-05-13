@@ -60,12 +60,8 @@
 			
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'magazine' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'start_lvl' => 'dropdown' ) ); ?>
-			</section>
-		</nav><!-- #site-navigation -->
-
-
-
-
+	</section>
+</nav><!-- #site-navigation -->
 
 	</header>
       </section>
@@ -75,11 +71,5 @@
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
 	<?php get_sidebar(); ?>
-      </ul>
-    </aside>
-
-    <aside class="right-off-canvas-menu">
-      <ul class="off-canvas-list">
-        <?php get_sidebar(); ?>
       </ul>
     </aside>
