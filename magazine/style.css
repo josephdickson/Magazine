@@ -994,14 +994,33 @@ footer img {display:block;margin: 0 auto;}
 .home .blog-info {font-weight:200;}
 .home p {font-family: Raleway, Helvetica, sans-serif; font-weight: 400; }
 
-.home .panel.counter-1 {background-color: #ffce00;}
-.home .panel.counter-1 ul li {list-style: none;}
-.home .panel.counter-1 h1 {
+.home .panel.features-box {
+	background-color: #ffce00;
+	border-width :0px;
+}
+.home .features-box img.flag {	
+	margin:-25px -28px 0 0;
+	padding:0;
+	position:relative;
+	float:right;
+	z-index:1;
+	height: 100%;
+}
+.home .panel.features-box ul li {list-style: none;}
+.home .panel.features-box h1.features-headline {
 	font-weight: 200;
 	font-size: 1.6em;
-	padding-top: 0.5em;
+	padding-top: 0em;
+	color: #fff;
+	float:left;
+	clear:right;
+	margin-top:-0.4em;
 }
-.home .panel.counter-1 a {color: #fff;}
+
+.home .panel.features-box ul {
+	margin-left:0;
+}
+
 .home div.panel img.attachment-full.wp-post-image {z-index: -1;}
 .home .flag {
 	z-index: 1;
@@ -1022,6 +1041,8 @@ footer#colophon.site-footer {
 	padding: 2em 0;
 }
 .home .flag a[rel] {color:#fff;}
+
+.home .features {margin-top:1em;}
 
 footer .related-links ul {
 	list-style:none;

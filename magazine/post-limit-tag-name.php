@@ -108,12 +108,21 @@ wp_reset_postdata();
 </div>
 
 <div class="small-16 large-4 columns">
-<?php 
+	<div class="panel features-box hide-for-small">
+		<?php // Requires ACF -- Pulls Homepage Index Box content from the Options page
+		if (function_exists('get_field')){
+			the_field('features-index-box', 'option');
+		}
+
+		?>
+	</div>
+
+<?php
 	// counter for unique class tags for an element
 	$count = 0;
 
 // The Query : Set limiter in WP_Query below
-$the_query = new WP_Query('tag=in-this-issue, Sagehen');
+$the_query = new WP_Query('tag=Sagehen');
 
 	echo '<ul class="small-block-grid-1 large-block-grid-1">';
 // The Loop

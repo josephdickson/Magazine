@@ -1,12 +1,9 @@
 <h3 class="related-articles">Featured Articles</h3>
 
 <?php
-	//start counter at zero
-	$count = 0;
+$current_post_ID = get_the_ID(); // the post's id is assigned to $current_post_ID
 
-
-// The Query : Set limiter in WP_Query below
-$the_query = new WP_Query('tag__not_in=7');
+$the_query = new WP_Query( array( 'post_type' => 'post', 'post__not_in' => array( $current_post_ID ) ) ); // current post is excluded from the loop
 
 	echo '<ul class="small-block-grid-2 large-block-grid-6 additional-articles">';
 // The Loop
