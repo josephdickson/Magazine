@@ -1110,4 +1110,50 @@ acf_add_local_field_group(array (
 ));
 
 endif;
+
+// Add WYSIWYG box to options page for featured items used on home.php
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array (
+	'key' => 'group_5554d23a02a9a',
+	'title' => 'Homepage Index Box',
+	'fields' => array (
+		array (
+			'key' => 'field_5554d2729e57a',
+			'label' => 'Features Index',
+			'name' => 'features-index-box',
+			'type' => 'wysiwyg',
+			'instructions' => 'A simple editor to add content to the homepage',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'tabs' => 'all',
+			'toolbar' => 'full',
+			'media_upload' => 1,
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+));
+
+endif;
+
 ?>
