@@ -4,7 +4,7 @@
 
 ?>
 
-<div class="small-16 large-8 columns">
+<div class="small-16 medium-8 large-8 columns">
 
 <?php
 // The Query : Set limiter in WP_Query below
@@ -73,7 +73,7 @@ wp_reset_postdata();
 </div>
 
 
-<div class="small-16 large-4 columns">
+<div class="small-16 medium-8 large-4 columns">
 <?php 
 // The Query : Set limiter in WP_Query below
 $the_query = new WP_Query('tag=president, the-class-of-2015');
@@ -107,8 +107,8 @@ wp_reset_postdata();
 ?>
 </div>
 
-<div class="small-16 large-4 columns">
-	<div class="panel features-box hide-for-small">
+<div class="small-16 medium-8 large-4 columns">
+	<div class="panel features-box hide-for-small hide-for-medium">
 		<?php // Requires ACF -- Pulls Homepage Index Box content from the Options page
 		if (function_exists('get_field')){
 			the_field('features-index-box', 'option');
