@@ -4,18 +4,18 @@
 
 ?>
 
-<div class="small-16 large-8 columns">
+<div class="small-16 columns">
 
 <?php
 // The Query : Set limiter in WP_Query below
-$the_query = new WP_Query();
+$the_query = new WP_Query($posts);
 
-	echo '<ul class="small-block-grid-1 large-block-grid-1">';
+	echo '<ul class="small-block-grid-1 large-block-grid-3">';
 // The Loop
 while ( $the_query->have_posts() ) {
 	$the_query->the_post();
 
-	echo '<li><div class="panel"><a href="' . get_permalink() . '">';
+		echo '<li><div class="panel"><a href="' . get_permalink() . '">';
 			if ( has_post_thumbnail() ) {
 			the_post_thumbnail('full');
 			echo '</a>';
