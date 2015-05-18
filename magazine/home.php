@@ -16,7 +16,7 @@ get_header(); ?>
 			<?php get_template_part('photo-main-index'); ?>
 			<h3 class="blog-info"><?php echo bloginfo('description'); ?></h3>
 					<div class="features small-16 medium-15 large-12 small-centered columns">		
-						<?php get_template_part( 'post-limit-tag-name' ); ?>
+						<?php get_template_part( 'post-loop' ); ?>
 				</div>
 			</main><!-- #main -->
 	</div><!-- #primary -->
