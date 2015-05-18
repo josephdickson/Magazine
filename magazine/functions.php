@@ -110,12 +110,13 @@ function magazine_scripts() {
 
 	wp_enqueue_script( 'magazine-foundation-modernizr', get_template_directory_uri() . '/js/vendor/modernizr.js', array(), '20150507', false );
 
-
 	wp_enqueue_script( 'magazine-foundation-clearing', get_template_directory_uri() . '/js/foundation/foundation.clearing.js', array(), '20150507', true );
 
 	wp_enqueue_script( 'magazine-foundation-interchange', get_template_directory_uri() . '/js/foundation/foundation.interchange.js', array(), '20150505', true );
 
 	wp_enqueue_script( 'magazine-foundation-offcanvas', get_template_directory_uri() . '/js/foundation/foundation.offcanvas.js', array(), '20150503', true );
+
+	wp_enqueue_script( 'magazine-foundation-orbit-slideshow', get_template_directory_uri() . '/js/foundation/foundation.orbit.js', array(), '20150515', true );
 
 	wp_enqueue_script( 'magazine-foundation-reveal', get_template_directory_uri() . '/js/foundation/foundation.reveal.js', array(), '20150705', true );
 

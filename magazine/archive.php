@@ -7,40 +7,42 @@
  * @package magazine
  */
 
-get_header(); ?>
-<!-- archive.php -->
+get_header('single'); ?>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<div class="row">
-			<?php if ( have_posts() ) : ?>
-
-				<header class="page-header">
-					<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
-						the_archive_description( '<div class="taxonomy-description">', '</div>' );
-					?>
-				</header><!-- .page-header -->
-
-				<?php /* Start the Loop */ ?>
+			<div class="row article-begin">
 				<?php while ( have_posts() ) : the_post(); ?>
+					<?php 
+						if ( has_post_thumbnail() ) {
+						the_post_thumbnail(); 
+					} 
+				?>
 
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'template-parts/content', get_post_format() );
-					?>
+				<div class="columns">
+						<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
-				<?php endwhile; ?>
+						<?php get_template_part( 'acf/acf' , 'slideshow' ); ?>
 
-				<?php the_posts_navigation(); ?>
+						<?php get_template_part( 'acf/acf', 'flexible-fields' ); ?>
+					
+						<?php get_template_part( 'acf/acf' , 'gallery' ); ?>
 
-			<?php else : ?>
+						<?php // the_post_navigation(); ?>
 
-				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+						<?php get_template_part('template-parts/social', 'sharing-buttons'); ?>
 
-			<?php endif; ?>
+						<?php
+							// If comments are open or we have at least one comment, load up the comment template
+							if ( comments_open() || get_comments_number() ) :
+								comments_template();
+							endif;
+						?>
+
+					<?php endwhile; // end of the loop. ?>
+
+					<?php get_template_part( 'template-parts/loop', 'tiles' ); ?>
+				</div>
 			</div><!-- .row -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
@@ -48,4 +50,6 @@ get_header(); ?>
 <div class="row">
 	<?php get_sidebar(); ?>
 </div>
+
 <?php get_footer(); ?>
+<?php get_template_part('template-parts/social', 'sharing-js'); ?>

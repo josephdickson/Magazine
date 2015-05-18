@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
 Description: Description
-Version: 1.0.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: magazine
@@ -803,7 +803,7 @@ a:active {
 	margin: 0 0 1.5em;
 }
 
-.single .additional-articles h1 {
+.additional-articles h1 {
 	font-weight: 200;
 	font-size: 1em;
 	padding-bottom: 0.67em;
@@ -1066,3 +1066,14 @@ margin-left:0;
 .single [rel="home"] {
 	padding:0 !important;
 }
+/*
+ *  Social Media and Sharing
+ */
+
+.fb-share-button.fb_iframe_widget {
+top: -4px;
+padding-right: 3px;
+}
+div.pinterest img {margin-top: -4px;}
+div.social-sharing div {display: inline; float:left; padding-right:1em;}
+

@@ -11,6 +11,10 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="<?php echo get_the_title(); ?>" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="<?php echo get_permalink(); ?>" />
+<meta property="og:image" content="<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 300,300 ), false, '' ); echo $src[0]; ?>" />
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 

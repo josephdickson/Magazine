@@ -25,10 +25,10 @@ else {
 	// do nothing
 
 }
-
-//	Advanced Custom Fields Pro Options Page
-//	http://www.advancedcustomfields.com/resources/options-page/
-
+/*
+ *	Advanced Custom Fields Pro Options Page
+ *	http://www.advancedcustomfields.com/resources/options-page/
+ */
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page();
@@ -166,6 +166,10 @@ register_field_group(array (
 	'instruction_placement' => 'label',
 	'hide_on_screen' => '',
 ));
+
+/*
+ *  Flexible Content
+ */
 
 register_field_group(array (
 	'key' => 'group_54592956ca395',
@@ -451,8 +455,9 @@ register_field_group(array (
 	'instruction_placement' => 'field',
 	'hide_on_screen' => '',
 ));
-
-// Footer contact Information
+/*
+ * Option's Page: Footer Contact Information
+ */
 register_field_group(array (
 	'key' => 'group_546bbbcf710d6',
 	'title' => 'Footer Contact Info',
@@ -588,8 +593,10 @@ When "Office Name" is clicked it will open an email to the provided address.
 	'instruction_placement' => 'label',
 	'hide_on_screen' => '',
 ));
+/*
+ * Redirect URL Page Template
+ */
 
-// Redirect URL
 register_field_group(array (
 	'key' => 'group_54810d07aa9f1',
 	'title' => 'Redirect URL',
@@ -631,7 +638,7 @@ register_field_group(array (
 
 
 
-/* Foundation 4 Clearing Gallery */
+/* Foundation 4 & 5 Clearing Gallery */
 register_field_group(array (
 	'key' => 'group_550b158d67abc',
 	'title' => 'Gallery',
@@ -679,10 +686,6 @@ register_field_group(array (
 	'instruction_placement' => 'label',
 	'hide_on_screen' => '',
 ));
-
-
-
-
 
 /* Social Networks */
 register_field_group(array (
@@ -831,7 +834,7 @@ register_field_group(array (
 
 endif;
 
-// Flex Video
+// Flex Video Embeds for Posts
 if( function_exists('register_field_group') ):
 
 register_field_group(array (
@@ -1143,6 +1146,128 @@ acf_add_local_field_group(array (
 				'param' => 'options_page',
 				'operator' => '==',
 				'value' => 'acf-options',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+));
+
+endif;
+
+/*
+ *  Slideshow 
+ */
+
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array (
+	'key' => 'group_543eaa70ad3c4',
+	'title' => 'Slideshow',
+	'fields' => array (
+		array (
+			'key' => 'field_543eaa7d2a327',
+			'label' => 'Slideshow',
+			'name' => 'slideshow',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'min' => '',
+			'max' => '',
+			'layout' => 'row',
+			'button_label' => 'Add Row',
+			'sub_fields' => array (
+				array (
+					'key' => 'field_543eaac62a328',
+					'label' => 'Image',
+					'name' => 'image',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array (
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'array',
+					'preview_size' => 'thumbnail',
+					'library' => 'all',
+					'min_width' => 0,
+					'min_height' => 0,
+					'min_size' => 0,
+					'max_width' => 0,
+					'max_height' => 0,
+					'max_size' => 0,
+					'mime_types' => '',
+				),
+				array (
+					'key' => 'field_543eaae02a329',
+					'label' => 'Caption',
+					'name' => 'caption',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array (
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => 'Caption Goes Here',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+					'readonly' => 0,
+					'disabled' => 0,
+				),
+				array (
+					'key' => 'field_543eab482a32a',
+					'label' => 'Page',
+					'name' => 'page',
+					'type' => 'page_link',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array (
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'post_type' => array (
+					),
+					'taxonomy' => array (
+					),
+					'allow_null' => 1,
+					'multiple' => 0,
+				),
+			),
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'default',
+			),
+		),
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'post',
 			),
 		),
 	),

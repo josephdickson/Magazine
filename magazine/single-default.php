@@ -16,14 +16,19 @@ get_header('single'); ?>
 						the_post_thumbnail(); 
 					} 
 				?>
+
 				<div class="columns">
 						<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
-						<?php get_template_part('acf/acf', 'flexible-fields'); ?>
+						<?php get_template_part( 'acf/acf' , 'slideshow' ); ?>
+
+						<?php get_template_part( 'acf/acf', 'flexible-fields' ); ?>
 					
 						<?php get_template_part( 'acf/acf' , 'gallery' ); ?>
 
 						<?php // the_post_navigation(); ?>
+
+						<?php get_template_part('template-parts/social', 'sharing-buttons'); ?>
 
 						<?php
 							// If comments are open or we have at least one comment, load up the comment template
@@ -43,4 +48,6 @@ get_header('single'); ?>
 <div class="row">
 	<?php get_sidebar(); ?>
 </div>
+
 <?php get_footer(); ?>
+<?php get_template_part('template-parts/social', 'sharing-js'); ?>
