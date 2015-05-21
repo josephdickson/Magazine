@@ -116,8 +116,6 @@ function magazine_scripts() {
 
 	wp_enqueue_script( 'magazine-foundation-offcanvas', get_template_directory_uri() . '/js/foundation/foundation.offcanvas.js', array(), '20150503', true );
 
-	wp_enqueue_script( 'magazine-foundation-orbit-slideshow', get_template_directory_uri() . '/js/foundation/foundation.orbit.js', array(), '20150515', true );
-
 	wp_enqueue_script( 'magazine-foundation-reveal', get_template_directory_uri() . '/js/foundation/foundation.reveal.js', array(), '20150705', true );
 
 	wp_enqueue_script( 'magazine-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
