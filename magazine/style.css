@@ -69,7 +69,7 @@ CSS Document
 # Normalize
 --------------------------------------------------------------*/
 html {
-	font-family: sans-serif;
+	font-family: 'Source Serif Pro', serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
@@ -308,13 +308,18 @@ h6 {
 }
 h1,
 h1.entry-title,
-h2,
-h3 {font-family: Raleway, Helvetica, sans-serif; font-weight: 700; }
+h2 {font-family: 'Source Serif Pro', serif; font-weight: 700; }
 
-h1.entry-title {display: inline;}
+h1.entry-title {
+	display: block;
+	margin-top:0.5em;
+}
 
-p {
+html p {
 	margin-bottom: 1.5em;
+	font-size: 1.2em;
+	font-family: 'Source Serif Pro', serif;
+	font-weight: 400;
 }
 
 dfn,
@@ -969,6 +974,11 @@ ul[class*="small-block-grid"] li div.panel p {
 # Design Modifications
 --------------------------------------------------------------*/
 
+/* Post and Page Images */
+figcaption.alignright {padding-left:2em;}
+figcaption.alignleft {padding-right:2em;}
+figcaption {font-size:0.7em;}
+
 .blog-info {
 	text-align:center;
 	background-color:#f7941d;
@@ -992,7 +1002,7 @@ footer img {display:block;margin: 0 auto;}
 
 
 .home .blog-info {font-weight:200;}
-.home p {font-family: Raleway, Helvetica, sans-serif; font-weight: 400; }
+.home p {font-family: 'Source Serif Pro', Helvetica, sans-serif; font-weight: 400; }
 
 .home .panel.features-box {
 	background-color: #ffce00;

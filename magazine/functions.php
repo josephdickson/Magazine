@@ -98,7 +98,9 @@ function magazine_scripts() {
 
 	wp_enqueue_style( 'magazine-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'raleway-google-font', 'http://fonts.googleapis.com/css?family=Raleway:700,400,200' );
+//	wp_enqueue_style( 'raleway-google-font', 'http://fonts.googleapis.com/css?family=Raleway:700,400,200' );
+
+	wp_enqueue_style ( 'source-serif-pro', 'http://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700,600' );
 
 	wp_enqueue_script( 'jquery-2.1.4', get_template_directory_uri() . '/js/vendor/jquery.js', array(), '20150505', true );
 

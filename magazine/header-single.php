@@ -55,7 +55,7 @@
 
 
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
-			<section class="top-bar-section">
+			<section class="main-section">
 		<ul class="title-area site-branding">
 			<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<?php if (function_exists('get_field')){
@@ -64,6 +64,7 @@
 			
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'magazine' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'start_lvl' => 'dropdown' ) ); ?>
+				<?php get_template_part('acf/acf', 'social-networks'); ?>
 	</section>
 </nav><!-- #site-navigation -->
 
