@@ -5,7 +5,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="entry-header columns">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta row">
@@ -26,6 +26,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php magazine_entry_footer(); ?>
+		<?php // magazine_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

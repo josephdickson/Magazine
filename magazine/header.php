@@ -35,25 +35,4 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'magazine' ); ?></a>
 
 	<div id="content" class="site-content">
-
-<div class="off-canvas-wrap" data-offcanvas>
-  <div class="inner-wrap">
-    <nav class="tab-bar">
-      <section class="left-small">
-        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
-      </section>
-
-      <section class="middle tab-bar-section">
-        <h1 class="title"><?php// bloginfo( 'name' ); ?></h1>
-	<header id="masthead" class="site-header" role="banner">
-		<?php get_template_part ('header', 'top-nav'); ?>
-	</header>
-      </section>
-
-    </nav>
-
-    <aside class="left-off-canvas-menu">
-      <ul class="off-canvas-list">
-	<?php get_sidebar(); ?>
-      </ul>
-    </aside>
+	<?php get_template_part ('header-top-nav'); ?>

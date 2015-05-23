@@ -17,9 +17,9 @@ get_header('single'); ?>
 					} 
 				?>
 
-				<div class="columns">
-						<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
+						<?php get_template_part( 'template-parts/content', 'single' ); ?>
+				<div class="columns">
 						<?php get_template_part( 'acf/acf' , 'slideshow' ); ?>
 
 						<?php get_template_part( 'acf/acf', 'flexible-fields' ); ?>

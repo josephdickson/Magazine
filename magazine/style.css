@@ -312,7 +312,9 @@ h2 {font-family: 'Source Serif Pro', serif; font-weight: 700; }
 
 h1.entry-title {
 	display: block;
-	margin-top:0.5em;
+	margin:0em;
+	padding: 0.5em 0;
+	text-align:center;
 }
 
 html p {
@@ -990,16 +992,24 @@ figcaption {font-size:0.7em;}
 .banner {
 	background-position:bottom;
 	margin-top:-2.8125rem;
-	height:300px;
+	height:250px;
 }
 footer img {display:block;margin: 0 auto;}
 
 /* Hyperlinks */
+.home .panel h1 {
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	font-weight: normal;
+	margin-top:0;
+	padding-top:0.67em;
+	font-size:1.6em;
+	line-height:1.2em;}
 .home .panel a:link h1,
 .home .panel a:visited h1,
 .home .panel a:active h1 {color:#f7941d;}
 .home .panel a:hover h1 {color:#003d71;}
 
+.home nav.tab-bar img {display:none}
 
 .home .blog-info {font-weight:200;}
 .home p {font-family: 'Source Serif Pro', Helvetica, sans-serif; font-weight: 400; }
@@ -1085,5 +1095,6 @@ top: -4px;
 padding-right: 3px;
 }
 div.pinterest img {margin-top: -4px;}
+div.social-sharing div {margin-bottom:1.5em;}
 div.social-sharing div {display: inline; float:left; padding-right:1em;}
 
