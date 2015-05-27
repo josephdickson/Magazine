@@ -1,3 +1,11 @@
+<?php
+/**
+ * The template for displaying all single posts.
+ *
+ * @package magazine
+ */
+
+get_header('video'); ?>
 <!-- single-video.php -->
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -14,6 +22,8 @@
 					<?php get_template_part( 'acf/acf' , 'gallery' ); ?>
 
 					<?php // the_post_navigation(); ?>
+
+					<?php get_template_part('template-parts/social', 'sharing-buttons'); ?>
 
 					<?php
 						// If comments are open or we have at least one comment, load up the comment template
@@ -33,3 +43,4 @@
 	<?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
+<?php get_template_part('template-parts/social', 'sharing-js'); ?>

@@ -799,6 +799,9 @@ a:active {
 	display: inline;
 }
 
+.single .entry-content p:first-child {
+	font-size: 1.6em;
+}
 .page-content,
 .entry-content,
 .entry-summary {
@@ -815,6 +818,7 @@ a:active {
 	font-size: 1em;
 	padding-bottom: 0.67em;
 	line-height:1.3em;
+	font-family: 'Open Sans' , Helvetica sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -997,7 +1001,9 @@ figcaption {font-size:0.7em;}
 footer img {display:block;margin: 0 auto;}
 
 /* Hyperlinks */
-.home .panel h1 {
+.home .panel h1,
+.category .panel h1,
+.tag .panel h1 {
 	font-family: 'Open Sans', Helvetica, sans-serif;
 	font-weight: normal;
 	margin-top:0;
@@ -1006,13 +1012,26 @@ footer img {display:block;margin: 0 auto;}
 	line-height:1.2em;}
 .home .panel a:link h1,
 .home .panel a:visited h1,
-.home .panel a:active h1 {color:#f7941d;}
-.home .panel a:hover h1 {color:#003d71;}
+.home .panel a:active h1,
+.category .panel a:link h1,
+.category .panel a:visited h1,
+.category .panel a:active h1,
+.tag .panel a:link h1,
+.tag .panel a:visited h1,
+.tag .panel a:active h1 {color:#f7941d;}
+
+.home .panel a:hover h1,
+.category .panel a:hover h1,
+.tag .panel a:hover h1 {color:#003d71;}
 
 .home nav.tab-bar img {display:none}
 
 .home .blog-info {font-weight:200;}
-.home p {font-family: 'Source Serif Pro', Helvetica, sans-serif; font-weight: 400; }
+
+.home p,
+.category p,
+.tag p {font-family: 'Source Serif Pro', Helvetica, sans-serif; font-weight: 400; }
+
 
 .home .panel.features-box {
 	background-color: #ffce00;

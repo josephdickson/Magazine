@@ -3,12 +3,12 @@
 
 	<!-- Facebook sharing button -->
 	<div class="facebook">
-		<a class="fb-share-button" data-href="<?php echo get_permalink(); ?>" data-layout="button">burp</a>
+		<a class="fb-share-button" data-href="<?php echo get_permalink(); ?>" data-layout="button">Share on Facebook</a>
 	</div>
 
 	<!-- Twitter sharing button -->
 	<div class="twitter">
-		<a class="twitter-share-button" href="<?php echo get_permalink(); ?>">Tweet</a>
+		<a class="twitter-share-button" href="<?php echo get_permalink(); ?>">Share on Twitter</a>
 	</div>
 
 	<!-- Pinterest sharing button -->

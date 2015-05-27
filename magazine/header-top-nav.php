@@ -1,10 +1,6 @@
 <nav class="tab-bar">	
 	<header id="masthead" class="site-header" role="banner">
-		<div class="left-small">
-			<h1 class="title"><?php// bloginfo( 'name' ); ?></h1>
-
-
-
+		<div class="left">
 				<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
 
 					<ul class="title-area site-branding">
