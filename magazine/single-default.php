@@ -16,10 +16,10 @@ get_header('single'); ?>
 						the_post_thumbnail(); 
 					} 
 				?>
-
+				<div class="columns">
 
 						<?php get_template_part( 'template-parts/content', 'single' ); ?>
-				<div class="columns">
+				
 						<?php get_template_part( 'acf/acf' , 'slideshow' ); ?>
 
 						<?php get_template_part( 'acf/acf', 'flexible-fields' ); ?>
@@ -38,9 +38,11 @@ get_header('single'); ?>
 						?>
 
 					<?php endwhile; // end of the loop. ?>
+				</div>
 
 					<?php get_template_part( 'template-parts/loop', 'tiles' ); ?>
-				</div>
+
+
 			</div><!-- .row -->
 		</main><!-- #main -->
 	</div><!-- #primary -->

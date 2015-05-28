@@ -568,7 +568,6 @@ a:active {
 }
 
 .main-navigation ul {
-	display: none;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
@@ -995,7 +994,6 @@ figcaption {font-size:0.7em;}
 }
 .banner {
 	background-position:bottom;
-	margin-top:-2.8125rem;
 	height:250px;
 }
 footer img {display:block;margin: 0 auto;}
@@ -1117,3 +1115,7 @@ div.pinterest img {margin-top: -4px;}
 div.social-sharing div {margin-bottom:1.5em;}
 div.social-sharing div {display: inline; float:left; padding-right:1em;}
 
+/* block grid */
+.block-grid {
+	width: 99%;
+}
